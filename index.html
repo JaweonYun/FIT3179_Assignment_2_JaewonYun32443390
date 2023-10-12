@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name = "viewport" content= "width=device-width, initial-scale= 1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vega_lite_vis.js"></script>
+
+    <title>Comparing Measurements of Welfare and Wellbeing for Australia to OECD Countries</title>
+
+    <style>
+        body{background: rgb(255, 255, 255);}
+    </style>
+</head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {
+    'packages':['geochart'],
+  });
+  google.charts.setOnLoadCallback(drawRegionsMap);
+
+  function drawRegionsMap() {
+    var data = google.visualization.arrayToDataTable([
+      ['Country', 'Popularity'],
+      ['Germany', 16],
+      ['United States', 19],
+      ['Spain', 10],
+      ['France', 14],
+      ['Italy', 6],
+      ['Sweden', 12],
+      ['Switzerland', 1],
+      ['Australia', 11],
+      ['Japan', 18],
+      ['Portugal', 1],
+      ['Canada', 5],
+      ['South Korea',11],
+      ['United Kingdom', 15],
+      ['Israel',1],
+      ['Mexico',10],
+      ['Finland',1],
+      ['Denmark',14],
+      ['Poland',11],
+      ['Austria',16],
+      ['Belgium',13],
+      ['Estonia',1],
+      ['Czech Republic',3],
+      ['Greece',2]
+    ]);
+
+    var options = {};
+
+    var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+    chart.draw(data, options);
+  }
+</script>
+<body>
+    <img src="OECD.png" height="90" alt="OECD Logo">
+    <img src="monash.png" height="78" alt="Monash University Logo">
+   
+    <h1 style="color: hsl(224, 37%, 20%); font-family: sans-serif;"> Comparing Measurements of Welfare and Wellbeing for Australia to OECD States</h1>
+    <h4 style="color: hsl(224, 37%, 20%); font-family: sans-serif;"> A Data Visualisation by Jaewon Yun </h4>
+    
+    <h3 style="color: hsl(224, 37%, 20%); font-family: sans-serif;"> Introduction</h3>
+    <h4 style="color: hsl(224, 37%, 20%); font-family: sans-serif;"> The Organisation for Economic Cooperation and Development (OECD) is an intergovernmental 
+        organisation with 38 member countries that was founded to stimualte economic progress and world trade. The majority of OECD Members are high-income 
+        economies ranked as "very high" in the Human Development Index, and are regareded as developed countries. 
+        
+        Australia is part of the OECD and comparisons will be made on key welfare and welling measurements including employment, housing, education, safety, healthcare, 
+        environment and life satisfaction. Comparisons will be made between OECD nations as it is one of the largest and most reliable source of comparable statistical, 
+        economic and social data. </h4>
+    
+
+    <h2 style="color: hsl(224, 37%, 20%); font-family: sans-serif;"> OECD Countries by GDP</h2>
+    <div id="regions_div" style="width: 1300px; height: 600px;"></div>
+
+    <h2 style="color: hsl(135, 72%, 21%); font-family: sans-serif;"> Australian Government Spendings</h2>
+
+    <div id="bar_chart">
+    </div>
+
+    <h2 style="color: hsl(224, 37%, 20%); font-family: sans-serif;"> OECD Average Government Spendings</h2>
+
+    <div id="bar_chart_2">
+    </div>
+
+
+
+</body>
+
+</html>
